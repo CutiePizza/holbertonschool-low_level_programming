@@ -18,6 +18,8 @@ for (i = 0; i < 10; i++)
 	for (j = 1; j < 10; j++)
 {
 	{
+	if (m != i || n != j)
+	{
 putchar(m + '0');
 putchar(n + '0');
 putchar(' ');
@@ -27,6 +29,7 @@ if (i != 9 || j != 9 || m != 9 || n != 8)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
