@@ -10,29 +10,19 @@ int main(void)
 int i, j;
 int m, n;
 
-for (m = 0; m < 10; m++)
+for (i = 0; i < 99; i++)
 {
-for (n = 0; n < 9; n++)
+for (j = i + 1; j < 100; j++)
 {
-for (i = 0; i < 10; i++)
-
-for (j = n + 1; j < 10; j++)
-{
-{
-if (m != i || n != j)
-	{
-putchar(m + '0');
-putchar(n + '0');
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
 putchar(' ');
-putchar(i + '0');
-putchar(j + '0');
-if (i != 9 || j != 9 || m != 9 || n != 8)
+putchar(j / 10 + '0');
+putchar(j % 10 + '0');
+if (i < 98 || j < 99 )
 {
 putchar(',');
 putchar(' ');
-}
-}
-}
 }
 }
 }
