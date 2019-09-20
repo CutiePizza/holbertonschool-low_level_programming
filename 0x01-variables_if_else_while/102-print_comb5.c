@@ -14,11 +14,11 @@ for (m = 0; m < 10; m++)
 {
 for (n = 0; n < 9; n++)
 {
-for (i =0; i < 10; i++)
+for (i = 0; i < 10; i++)
 
-for (j =n+1; j < 10; j++)
-{ 
-	{
+for (j = n + 1; j < 10; j++)
+{
+{
 if (m != i || n != j)
 	{
 putchar(m + '0');
