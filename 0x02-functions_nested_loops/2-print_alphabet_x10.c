@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-*code for Holberton School students.
+*print_alphabet_x10 - Entry point
 *
-* Return: Always 0.
+* Return: alphabet
 */
 void print_alphabet_x10(void)
 {
