@@ -9,12 +9,11 @@ int main(void)
 char i[] = "Holberton";
 int j = 0;
 
-while (j < 10)
+while (j < 8)
 {
 _putchar(i[j]);
 j++;
 }
 _putchar('\n');
-
 return (0);
 }
