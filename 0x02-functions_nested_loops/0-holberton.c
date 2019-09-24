@@ -9,7 +9,7 @@ int main(void)
 char i[] = "Holberton";
 int j = 0;
 
-while (j < 8)
+while (j < 9)
 {
 _putchar(i[j]);
 j++;
