@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 *print_times_table - check the code for Holberton School students.
-*@n: ok
+*@n: integer
 * Return: Always 0.
 */
 void print_times_table(int n)
@@ -39,6 +39,7 @@ _putchar(' ');
 _putchar(' ');
 _putchar(' ');
 _putchar(s + '0');
+}
 }
 _putchar('\n');
 }
