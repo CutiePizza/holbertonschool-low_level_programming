@@ -1,44 +1,48 @@
 #include "holberton.h"
+
 /**
-*print_times_table - check the code for Holberton School students.
+*print_times_table - gives the times table
 *@n: integer
-* Return: Always 0.
+*Return: void
 */
+
 void print_times_table(int n)
 {
-int i, j, s;
-if (n > 0 && n < 15)
+if ((n >= 0) && (n <= 15))
 {
+int i, j, r;
 for (i = 0; i <= n; i++)
 {
 for (j = 0; j <= n; j++)
 {
-s = i * j;
-if (s == 0 && j == 0)
-	_putchar(s + '0');
-else if (s >= 10 && s < 100)
+r = i * j;
+if ((r == 0) && (j == 0))
 {
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(s / 10 + '0');
-_putchar(s % 10 + '0');
+_putchar(r + '0');
 }
-else if (s > 99)
+else if (r <= 9)
 {
 _putchar(',');
 _putchar(' ');
-_putchar((s / 100) + '0');
-_putchar(((s % 100) / 10) + '0');
-_putchar((s % 10) + '0');
+_putchar(' ');
+_putchar(' ');
+_putchar(r + '0');
+}
+else if (r <= 99)
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(r / 10 + '0');
+_putchar(r % 10 + '0');
 }
 else
 {
 _putchar(',');
 _putchar(' ');
-_putchar(' ');
-_putchar(' ');
-_putchar(s + '0');
+_putchar(r / 100 + '0');
+_putchar((r / 10) % 10 + '0');
+_putchar(r % 10 + '0');
 }
 }
 _putchar('\n');
