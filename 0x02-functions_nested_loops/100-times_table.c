@@ -18,7 +18,7 @@ if (s == 0 && j == 0)
 	_putchar(s + '0');
 if (s >= 10 && s < 100)
 {
-_putchar(' ');
+_putchar(',');
 _putchar(' ');
 _putchar(' ');
 _putchar(s / 10 + '0');
