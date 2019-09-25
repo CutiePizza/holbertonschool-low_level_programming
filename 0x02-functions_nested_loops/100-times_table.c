@@ -16,7 +16,7 @@ for (j = 0; j <= n; j++)
 s = i * j;
 if (s == 0 && j == 0)
 	_putchar(s + '0');
-if (s >= 10 && s < 100)
+else if (s >= 10 && s < 100)
 {
 _putchar(',');
 _putchar(' ');
