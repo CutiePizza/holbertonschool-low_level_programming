@@ -28,9 +28,9 @@ else if (s > 99)
 {
 _putchar(',');
 _putchar(' ');
-_putchar(s / 100 + '0');
-_putchar(s % 100 / 10 + '0');
-_putchar(s % 10 + '0');
+_putchar((s / 100) + '0');
+_putchar(((s % 100) / 10) + '0');
+_putchar((s % 10) + '0');
 }
 else
 {
