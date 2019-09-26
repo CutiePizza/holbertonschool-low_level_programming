@@ -11,15 +11,13 @@ int i;
 int j = 0;
 	while (j < 10)
 	{
-		for (i = 0; i < 10; i++)
-		{
-			_putchar(i + '0');
-		}
-		for (i = 10; i < 15; i++) 
-		{
+		for (i = 0; i < 15; i++)
+		{	
+			if (i > 10)
 			_putchar(i / 10 + '0');
 			_putchar(i % 10 + '0');
 		}
+		
 		j++;
 		_putchar('\n');
 	}
