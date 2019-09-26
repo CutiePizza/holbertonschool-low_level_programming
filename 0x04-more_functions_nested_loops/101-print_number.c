@@ -6,32 +6,13 @@
  */
 void print_number(int n)
 {
-char lastDigit;
-long reversed;
 
 if (n < 0)
 {
 _putchar('-');
-lastDigit = (char)('0' - (n % 10));
-n /= -10;
+n = -n;
 }
-else
-{
-lastDigit = (char)((n % 10) + '0');
-n /= 10;
-}
-
-reversed = 0;
-while (n > 0)
-{
-reversed = reversed * 10 + (n % 10);
-n /= 10;
-}
-while (reversed > 0)
-{
-char c = (char)((reversed % 10) + '0');
-_putchar(c);
-reversed /= 10;
-}
-_putchar(lastDigit);
+if (n / 10)
+print_number(n / 10);
+_putchar(n % 10 + '0');
 }
