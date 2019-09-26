@@ -1,8 +1,12 @@
 #include <stdio.h>
-
+/**
+ * main - Entry main function
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-long long int a = 612852475143;
+long int a = 612852475143;
 int b = 2;
 
 while (a > b)
@@ -15,7 +19,6 @@ b = 2;
 else
 b += 1;
 }
-printf("%d", b);
-printf("\n");
+printf("%d\n", b);
 return (0);
 }
