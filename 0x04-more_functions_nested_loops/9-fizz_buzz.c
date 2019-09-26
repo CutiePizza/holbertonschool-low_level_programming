@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-int i, a, b, c, s;
+int i, a, b, s;
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -26,11 +26,12 @@ int i, a, b, c, s;
 	a = i / 10;
 	b = i % 10;
 	s = a + b;
-		do {
+		while (s > 10)
+		{
 		a = a / 10;
 		b = b % 10;
 		s = a + b;
-		} while (s > 10);
+		}
 		if (((a + b == 3) || (a + b == 6) || (a + b == 9)) && (b == 0 || b == 5))
 			printf("FizzBuzz ");
 		else if ((a + b == 3) || (a + b == 6) || (a + b == 9))
