@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-long int n_1 = 2;
-long int n_2 = 1;
-long int i, s;
+long  n_1 = 2;
+long  n_2 = 1;
+long  i, s;
 s = 0;
 printf("%ld, %ld, ", n_2, n_1);
 
@@ -18,7 +18,6 @@ printf("%ld, %ld, ", n_2, n_1);
 		printf("%ld, ", s);
 		n_2 =  n_1;
 		n_1 = s;
-		
 	}
 	printf("\n");
 
