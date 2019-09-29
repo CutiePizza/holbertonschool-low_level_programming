@@ -15,7 +15,10 @@ printf("%ld, %ld, ", n_2, n_1);
 	for (i = 1; i < 49; i++)
 	{
 		s = n_1 + n_2;
+		if (i != 48)
 		printf("%ld, ", s);
+		else
+		printf("%ld", s);
 		n_2 =  n_1;
 		n_1 = s;
 	}
