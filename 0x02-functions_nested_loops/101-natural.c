@@ -18,4 +18,5 @@ for (i = 1; i < 1024; i++)
 	}
 }
 printf("%d\n", s);
+return (0);
 }
