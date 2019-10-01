@@ -9,7 +9,7 @@ int _atoi(char *s)
 	int l;
 	int i, m;
 	int ok;
-	unsigned long c;
+	signed long c;
 
 	c = 0;
 	i = 0;
