@@ -21,15 +21,7 @@ int _atoi(char *s)
 		l++;
 	}
 	while (i < l && ok == 0)
-	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			c = c * 10 + (s[i] - '0');
-				if (s[i + 1] >= '0' && s[i + 1] <= '9')
-					ok = 0;
-				else
-					ok = 1;
-		}
+	{	
 		if (s[i] == '+')
 		{
 			m = m * 1;
@@ -38,7 +30,16 @@ int _atoi(char *s)
 		{
 			m = m * -1;
 		}
-		i++;
+
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			c = c * 10 + (s[i] - '0');
+				if (s[i + 1] >= '0' && s[i + 1] <= '9')
+					ok = 0;
+				else
+					ok = 1;
+		}
+			i++;
 	}
 return (c * m);
 }
