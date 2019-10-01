@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
 * _atoi - check the code for Holberton School students.
 *@s: character
