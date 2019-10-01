@@ -24,7 +24,7 @@ if (len % 2 == 0)
 else
 {
 n = (len - 1) / 2;
-	for (j = n; j < len; j++)
+	for (j = n + 1; j < len; j++)
 	{
 		_putchar(str[j]);
 	}
