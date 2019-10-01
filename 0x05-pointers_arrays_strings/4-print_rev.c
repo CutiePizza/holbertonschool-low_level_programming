@@ -1,20 +1,26 @@
-
-#include "holberton.h"
+iinclude "holberton.h"
 
 /**
-*print_rev - prints a string
-*@s: character
-*Return: void
+* print_rev - prints a string
+* @s: character
+* Return: void
 */
+
 void print_rev(char *s)
 {
-	int i = 0;
+	int i;
 	int j;
 
-	i = _strlen(s);
-	for (j = i; j >= 0; j--)
-	{
-	_putchar(s[j]);
-	}
+	i = 0;
+
+while (*(s + i) != '\0')
+{
+	i++;
+}
+
+for (j = i; j >= 0; j--)
+{
+	_putchar(*(s + j));
+}
 	_putchar('\n');
 }
