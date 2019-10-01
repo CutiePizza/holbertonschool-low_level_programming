@@ -22,18 +22,14 @@ int _atoi(char *s)
 	}
 	while (i < l && ok == 0)
 	{
-		if (s[i] == '+')
+		if (s[i] == '-')
 		{
-			m = m * 1;
-		}
-		else if (s[i] == '-')
-		{
-			m = m * -1;
+			m *= -1;
 		}
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			c = c * 10 + (s[i] - '0');
+			c = c * 10 + (s[i] - 48);
 				if (s[i + 1] >= '0' && s[i + 1] <= '9')
 					ok = 0;
 				else
@@ -44,4 +40,3 @@ int _atoi(char *s)
 	c = c * m;
 return (c);
 }
-
