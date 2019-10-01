@@ -21,7 +21,7 @@ int _atoi(char *s)
 		l++;
 	}
 	while (i < l && ok == 0)
-	{	
+	{
 		if (s[i] == '+')
 		{
 			m = m * 1;
