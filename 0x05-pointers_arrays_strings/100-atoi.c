@@ -41,6 +41,7 @@ int _atoi(char *s)
 		}
 			i++;
 	}
-return (c * m);
+	c = c * m;
+return (c);
 }
 
