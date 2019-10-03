@@ -17,7 +17,10 @@ char I[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 		for (j = 0; j < 52; j++)
 		{
 			if (T[j] == ch[i])
+			{
 				ch[i] = I[j];
+				break;
+			}
 		}
 	}
 return (ch);
