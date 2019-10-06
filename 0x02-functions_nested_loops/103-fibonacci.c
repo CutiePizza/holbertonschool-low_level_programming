@@ -9,19 +9,17 @@ int main(void)
 long  n_1 = 2;
 long  n_2 = 1;
 long  i, s;
-s = 0;
-printf("%ld, %ld, ", n_2, n_1);
 
-	do
+s = 2;
+
+	for (i = 1; i < 31; i++)
 	{
+		if ((n_1 + n_2) % 2 == 0)
 		s = n_1 + n_2;
-		if (s % 2 == 0)
-		{
-		printf("%ld, ", s);
-		}
+
 		n_2 =  n_1;
-		n_1 = s;
-	} while (s < 4000000);
-	printf("\n");
+		n_1 = n_1 + n_2;
+	}
+	printf("%ld\n", s);
 return (0);
 }
