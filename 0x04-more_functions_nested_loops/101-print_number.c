@@ -8,11 +8,16 @@ void print_number(int n)
 {
 int c, i, j, k;
 
+if (n == 0)
+_putchar('0');
+else
+{
 if (n < 0)
 {
 n = -n;
 _putchar('-');
 }
+
 c = n;
 i = 1;
 
@@ -33,5 +38,6 @@ while (j >= 1)
 _putchar((n / j)+'0');
 n = n % j;
 j = j / 10;
+}
 }
 }
