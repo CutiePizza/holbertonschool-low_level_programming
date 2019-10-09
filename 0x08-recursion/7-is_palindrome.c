@@ -24,7 +24,7 @@ if (*s == '\0')
 
 int is_pal(char *start, char *end, int len)
 {
-	if (len == 0)
+	if (len < 0)
 		return (1);
 	else if (*start == *end)
 		return (is_pal(start + 1, end - 1, len - 1));
