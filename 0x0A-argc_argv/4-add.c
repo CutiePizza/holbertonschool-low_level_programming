@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 		if (*argv[i] == '0')
-			sum = 0;
+			sum += 0;
 		else
 		{
 		n = atoi(argv[i]);
