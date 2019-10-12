@@ -2,13 +2,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-/**
-  * is_positive - check if parameter is postive number
-  * @ch: string
-  * Return: 0 if true, 1 if not
-  */
-
 int is_positive(char *ch);
+
 /**
   * main - adds numbers
   * @argc: number of arguments
@@ -40,6 +35,12 @@ int main(int argc, char *argv[])
 		printf("%d\n", sum);
 return (0);
 }
+
+/**
+  * is_positive - check if parameter is postive number
+  * @ch: string
+  * Return: 0 if true, 1 if not
+  */
 
 int is_positive(char *ch)
 {
