@@ -13,7 +13,7 @@ int _strlen(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
+int i;
 dog_t *doggy = malloc(sizeof(dog_t));
 
 	if (doggy == NULL || name == '\0' || owner == '\0')
@@ -27,10 +27,11 @@ dog_t *doggy = malloc(sizeof(dog_t));
 			free(doggy);
 			return (NULL);
 		}
-	doggy->name = name;
+	for (i = 0; name[i]; i++)
+		doggy->name[i] = name[i];
+	for (i = 0; owner[i]; i++)
+		doggy->owner[i] = owner[i];
 	doggy->age = age;
-	doggy->owner = owner;
-
 return (doggy);
 }
 
