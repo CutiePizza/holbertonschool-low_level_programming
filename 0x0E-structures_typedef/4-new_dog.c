@@ -24,6 +24,8 @@ dog_t *doggy = malloc(sizeof(dog_t));
 
 		if (doggy->name == NULL || doggy->owner == NULL)
 		{
+			free(doggy->name);
+			free(doggy->owner);
 			free(doggy);
 			return (NULL);
 		}
