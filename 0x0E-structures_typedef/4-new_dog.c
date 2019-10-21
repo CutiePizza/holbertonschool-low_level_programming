@@ -5,7 +5,7 @@
 /**
   * new_dog - Create a new dog
   * @name: String, dog's name
-  * @age; dog's age
+  * @age: dog's age
   * @owner: dog's owner
   * Return: Pointer to type dog_t
   */
@@ -17,9 +17,11 @@ dog_t *doggy = malloc(sizeof(dog_t));
 
 	if (doggy == NULL)
 		return (NULL);
+	if (name == '\0' || owner == '\0')
+		return (NULL);
 	doggy->name = name;
 	doggy->age = age;
-	doggy-> owner = owner;
+	doggy->owner = owner;
 return (doggy);
 }
 
