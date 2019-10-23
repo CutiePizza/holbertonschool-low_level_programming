@@ -14,14 +14,12 @@ int main(int argc, char *argv[])
 {
 	int num1, num2, res;
 	int (*op)(int, int);
-	
+
 	if (argc != 4)
 	{
-		printf("Error 1 \n");
-		exit(98);	
+		printf("Error\n");
+		exit(98);
 	}
-	
-	
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
@@ -29,11 +27,11 @@ int main(int argc, char *argv[])
 
 	if (op == NULL)
 	{
-		printf("Error 2\n");
+		printf("Error\n");
 		exit(99);
 	}
 
 	res = op(num1, num2);
 	printf("%d\n", res);
-	return (0);	
+	return (0);
 }

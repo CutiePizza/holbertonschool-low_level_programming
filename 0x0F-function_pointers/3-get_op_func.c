@@ -25,11 +25,10 @@ int i = 0;
 
 	while (ops[i].op != NULL)
 	{
-		if (strcmp(s, ops[i].op))
+		if (strcmp(s, ops[i].op) == 0)
 			break;
 		i++;
 	}
 
-printf("%s\n", ops[i].op);
 return (ops[i].f);
 }
