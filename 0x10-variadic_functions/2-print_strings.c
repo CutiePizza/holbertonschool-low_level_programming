@@ -20,13 +20,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		_char = va_arg(list, char*);
 		if (!(_char))
-			printf("(nil)");
-		else
 		{
+			printf("(nil)");
+		}
+		else
 			printf("%s", _char);
 			if (separator != NULL && i < n - 1)
 				printf("%s", separator);
-		}
 	}
 printf("\n");
 va_end(list);
