@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
 
 /**
- * print_all - print all the parameters
- * @format: constant pointer to char
+ * print_c - print char
+ * @c: list
  */
-
-typedef struct _types
-{
-	char s;
-	void (*p)(va_list);
-} t;
-
-
 
 void print_c(va_list c)
 {
 	printf("%c", va_arg(c, int));
 }
 
+/**
+  * print_i - print integer
+  * @i: list
+  */
+
 void print_i(va_list i)
 {
 	printf("%d", va_arg(i, int));
 }
+/**
+  * print_f - print double
+  * @f: list
+  */
 
 void print_f(va_list f)
 {
 	printf("%f", va_arg(f, double));
 }
+/**
+  * print_s - print string
+  * @s: string
+  */
 
 void print_s(va_list s)
 {
 	char *str = va_arg(s, char *);
+
 	if (str != NULL)
 	{
 		printf("%s", str);
@@ -41,26 +48,33 @@ void print_s(va_list s)
 	printf("(nil)");
 }
 
+/**
+  * print_all - print everything
+  * @format: types
+  */
+
 void print_all(const char * const format, ...)
 {
+
+	t array[] = {
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL}
+	};
+
 	unsigned int i = 0, j = 0;
 	void (*func)(va_list);
 	va_list list;
-
-	t array[] = {
-		{'c', print_c},
-		{'i', print_i},
-		{'f', print_f},
-		{'s', print_s},
-	};
 
 	va_start(list, format);
 
 	while (format[i] != '\0')
 	{
-		while (j < 5)
+		while (array[j].s != NULL)
 		{
-			if (array[j].s == format[i])
+			if (array[j].s[0] == format[i])
 			{
 				func = array[j].p;
 				func(list);
