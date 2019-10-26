@@ -2,10 +2,10 @@
 #include <stdarg.h>
 
 /**
-  * print_strings - Print strings followed by a new line
-  * @separator: string, separator
-  * @n: Number of parameters
-  */
+ * print_strings - Print strings followed by a new line
+ * @separator: string, separator
+ * @n: Number of parameters
+ */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -14,8 +14,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *_char;
 
 	if (n != 0)
-	{
-	va_start(list, n);
+		va_start(list, n);
+
 	for (i = 0; i < n; i++)
 	{
 		_char = va_arg(list, char*);
@@ -23,10 +23,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		else
 			printf("%s", _char);
-			if (separator != NULL && i != n - 1)
-				printf("%s", separator);
+		if (separator != NULL && i != n - 1)
+			printf("%s", separator);
 	}
-printf("\n");
-va_end(list);
-	}
+	printf("\n");
+	va_end(list);
 }
