@@ -15,7 +15,6 @@ void print_c(va_list c)
  * @i: list
  */
 
-
 void print_i(va_list i)
 {
 	printf("%d", va_arg(i, int));
@@ -69,7 +68,7 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	while (format[i] && format)
+	while (format && format[i])
 	{	j = 0;
 		while (array[j].s != NULL)
 		{
