@@ -6,11 +6,12 @@ section .text
 
 global main
 main:
-mov edx, 17
-mov ecx, message
-mov ebx, 1
-mov eax, 4
-int 0x80
+mov rax, 1
+mov rdi, 1
+mov rsi, message
+mov rdx, 17
+syscall
 
-mov eax, 1
-int 0x80
+mov rax, 60
+mov rdi, 0
+syscall
