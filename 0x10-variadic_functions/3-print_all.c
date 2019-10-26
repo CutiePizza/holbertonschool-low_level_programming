@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	while (format[i] != '\0' && format != NULL)
+	while (format[i] && format)
 	{	j = 0;
 		while (array[j].s != NULL)
 		{
@@ -84,6 +84,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	printf("\n");
 	va_end(list);
+	printf("\n");
 }
