@@ -1,6 +1,6 @@
 section .data
 
-message db "Hello, Holberton\n", 11
+message db "Hello, Holberton", 10
 
 section .text
 
