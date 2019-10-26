@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 /**
  * print_c - print char
@@ -66,23 +65,23 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0, j = 0;
 	void (*func)(va_list);
 	va_list list;
+	char *sep = "";
 
 	va_start(list, format);
 
-	while (format && format[i])
-	{
+	while (format[i] != '\0' && format != NULL)
+	{	j = 0;
 		while (array[j].s != NULL)
 		{
 			if (array[j].s[0] == format[i])
 			{
+				printf("%s", sep);
 				func = array[j].p;
 				func(list);
-				if (format[i + 1] != '\0')
-					printf(", ");
+				sep = ", ";
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	printf("\n");
