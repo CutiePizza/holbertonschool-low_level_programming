@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdlib.h>
 /**
  * print_listint_safe - find if a list has a loop
  * @head : head of the list
@@ -11,7 +11,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *slow = head, *fast = head, *save = NULL;
 	unsigned int i = 0, ok = 1, n;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		exit(98);
 	while (slow && fast && fast->next && ok == 1)
 	{
