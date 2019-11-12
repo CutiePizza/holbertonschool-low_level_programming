@@ -31,8 +31,6 @@ void print(int r1, int w1, char *buff1,
 	while (buff1 != NULL)
 	{
 		r1 = read(fd1, buff1, 1024);
-		if (r1 <= 0)
-			buff1 = NULL;
 		if (r1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv1);
@@ -89,7 +87,7 @@ int main(int argc, char **argv)
 	}
 	buff1 = malloc(1024);
 	if (buff1 == NULL)
-		return (-1);
+		exit(1);
 	print(r1, w1, buff1, fd1, fd2, argv[1], argv[2]);
 	close(fd1);
 	close(fd2);
