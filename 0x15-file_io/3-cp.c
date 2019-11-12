@@ -31,6 +31,9 @@ void print(int r1, int w1, char *buff1,
 	while (buff1 != NULL)
 	{
 		r1 = read(fd1, buff1, 1024);
+
+		if (r1 <= 0)
+			buff1 = NULL;
 		if (r1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv1);
