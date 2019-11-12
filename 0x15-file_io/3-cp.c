@@ -59,7 +59,7 @@ void print(int r1, int w1, char *buff1,
 int main(int argc, char **argv)
 {
 
-	int fd1, fd2, r1 = 0, w1 = 0;
+	int fd1, fd2, r1 = 0, w1 = 0, f1, f2;
 	char *buff1;
 
 	if (argc != 3)
@@ -90,12 +90,12 @@ int main(int argc, char **argv)
 	}
 	buff1 = malloc(1024);
 	if (buff1 == NULL)
-		exit(1);
+		return (-1);
 	print(r1, w1, buff1, fd1, fd2, argv[1], argv[2]);
-	close(fd1);
-	close(fd2);
-	verif(fd1);
-	verif(fd2);
+	f1 = close(fd1);
+	f2 = close(fd2);
+	verif(f1);
+	verif(f2);
 	free(buff1);
 	return (0);
 }
