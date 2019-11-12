@@ -2,11 +2,11 @@
 
 
 /**
-  * VerifyClose - verify close
+  * verifyClose - verify close
   * @fd: ok
   */
 
-void VerifyClose(int fd)
+void verifyClose(int fd)
 {
 	if (fd == -1)
 	{
@@ -59,7 +59,7 @@ void print(int r1, int w1, char *buff1,
 int main(int argc, char **argv)
 {
 
-	int fd1, fd2, r1 = 0, w1;
+	int fd1, fd2, r1 = 0, w1 = 0, FD_VALUE;
 	char *buff1;
 
 	if (argc != 3)
