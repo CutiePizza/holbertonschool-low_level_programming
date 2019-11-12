@@ -11,13 +11,11 @@ void verif(int fd)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-
 }
 
 /**
  * print - print
  * @r1: r1
- * @w1: w1
  * @buff1: buff1
  * @fd1: fd1
  * @fd2: fd2
@@ -25,7 +23,7 @@ void verif(int fd)
  * @argv2: argv2
  */
 
-void print(int r1, char *buff1,
+void print(ssize_t r1, char *buff1,
 		int fd1, int fd2, char *argv1, char *argv2)
 {
 	while ((r1 = read(fd1, buff1, 1024)) > 0)
@@ -52,11 +50,12 @@ void print(int r1, char *buff1,
  * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 
-	int fd1, fd2, r1 = 0, f1, f2;
-	char *buff1;
+	int fd1, fd2, f1, f2;
+	ssize_t r1 = 0;
+	char buff1[1024];
 
 	if (argc != 3)
 	{
@@ -64,19 +63,18 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	fd1 = open(argv[1], O_RDWR);
+	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	buff1 = malloc(1024 * sizeof(char));
 	print(r1, buff1, fd1, fd2, argv[1], argv[2]);
 	f1 = close(fd1);
 	f2 = close(fd2);
