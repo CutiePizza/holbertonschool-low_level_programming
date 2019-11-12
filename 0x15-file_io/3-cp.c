@@ -11,7 +11,7 @@ void verifyClose(int fd)
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd);
-		exit(98);
+		exit(100);
 	}
 }
 
