@@ -42,7 +42,7 @@ void print(int r1, int w1, char *buff1,
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv2);
 			exit(99);
 		}
-	} while (r1 == 1024);
+	} while (r1 > 0);
 }
 
 
