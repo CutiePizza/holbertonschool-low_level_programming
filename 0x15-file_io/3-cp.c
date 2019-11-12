@@ -30,7 +30,7 @@ void print(int r1, int w1, char *buff1,
 {
 	while (buff1 != NULL)
 	{
-		r1 = read(fd1, buff1, 1024);
+		r1 = read(fd1, buff1, sizeof(buff1));
 
 		if (r1 <= 0)
 			buff1 = NULL;
@@ -67,28 +67,24 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	if (argv[1] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	fd1 = open(argv[1], O_RDWR);
-
 	if (fd1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	buff1 = malloc(1024);
+	buff1 = malloc(1024 * sizeof(char));
 	print(r1, w1, buff1, fd1, fd2, argv[1], argv[2]);
 	f1 = close(fd1);
 	f2 = close(fd2);
