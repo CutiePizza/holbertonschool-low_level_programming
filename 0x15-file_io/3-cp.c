@@ -28,21 +28,20 @@ void verif(int fd)
 void print(int r1, int w1, char *buff1,
 		int fd1, int fd2, char *argv1, char *argv2)
 {
-	do
+	while ((r1 = read(fd1, buff1, 1024)) > 0)
 	{
-		r1 = read(fd1, buff1, sizeof(buff1));
-		if (r1 == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv1);
-			exit(98);
-		}
-		w1 = write(fd2, buff1, r1);
-		if (w1 == -1)
+		if ((write(fd2, buff1, r1)) != r1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv2);
 			exit(99);
 		}
-	} while (r1 > 0);
+	}
+
+	if (r1 == -1)
+		{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv1);
+		exit(98);
+		}
 }
 
 
@@ -64,11 +63,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	if (argv[1] == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+
 	fd1 = open(argv[1], O_RDWR);
 	if (fd1 == -1)
 	{
