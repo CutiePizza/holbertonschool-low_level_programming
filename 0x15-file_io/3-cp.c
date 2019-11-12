@@ -28,12 +28,9 @@ void verif(int fd)
 void print(int r1, int w1, char *buff1,
 		int fd1, int fd2, char *argv1, char *argv2)
 {
-	while (buff1 != NULL)
+	do
 	{
 		r1 = read(fd1, buff1, sizeof(buff1));
-
-		if (r1 <= 0)
-			buff1 = NULL;
 		if (r1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv1);
@@ -45,7 +42,7 @@ void print(int r1, int w1, char *buff1,
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv2);
 			exit(99);
 		}
-	}
+	} while (r1 == 1024);
 }
 
 
