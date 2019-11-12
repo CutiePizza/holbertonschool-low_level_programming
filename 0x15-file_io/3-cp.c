@@ -6,7 +6,7 @@
 void verif(int fd)
 {
 
-	if (r1 == -1)
+	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -58,7 +58,7 @@ void print(int r1, int w1, char *buff1,
 int main(int argc, char **argv)
 {
 
-	int fd1, fd2, r1 = 0, w1 = 0, FD_VALUE;
+	int fd1, fd2, r1 = 0, w1 = 0;
 	char *buff1;
 
 	if (argc != 3)
