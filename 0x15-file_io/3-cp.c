@@ -1,18 +1,17 @@
 #include "holberton.h"
-
-
 /**
-  * verifyClose - verify close
-  * @fd: ok
-  */
-
-void verifyClose(int fd)
+ * verif - verif
+ * @fd: fd
+ */
+void verif(int fd)
 {
-	if (fd == -1)
+
+	if (r1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
+
 }
 
 /**
@@ -89,13 +88,13 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	buff1 = malloc(1024);
-
+	if (buff1 == NULL)
+		return (-1);
 	print(r1, w1, buff1, fd1, fd2, argv[1], argv[2]);
 	close(fd1);
 	close(fd2);
-	FD_VALUE = fd1;
-	verifyClose(FD_VALUE);
-	FD_VALUE = fd2;
-	verifyClose(FD_VALUE);
+	verif(fd1);
+	verif(fd2);
+	free(buff1);
 	return (0);
 }
