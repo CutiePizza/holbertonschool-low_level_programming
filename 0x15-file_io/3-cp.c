@@ -90,7 +90,7 @@ int main(int argc, char **argv)
 	}
 	buff1 = malloc(1024);
 	if (buff1 == NULL)
-		return;
+		return (NULL);
 	print(r1, w1, buff1, fd1, fd2, argv[1], argv[2]);
 	f1 = close(fd1);
 	f2 = close(fd2);
