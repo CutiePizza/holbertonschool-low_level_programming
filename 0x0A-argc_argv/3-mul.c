@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
-  * main - Program that multiplies two numbers
-  * @argc: number of arguments
-  * @argv: arguments
-  * Return: 0.
-  */
+ * main - Program that multiplies two numbers
+ * @argc: number of arguments
+ * @argv: arguments
+ * Return: 0.
+ */
 
 int main(int argc, char *argv[])
 {

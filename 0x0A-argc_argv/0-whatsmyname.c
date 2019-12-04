@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
-  * main - prints the name of the program
-  * @argc: integer
-  * @argv: char
-  * Return: 0.
-  */
+ * main - prints the name of the program
+ * @argc: integer
+ * @argv: char
+ * Return: 0.
+ */
 
 int main(__attribute__((unused)) int argc, char *argv[])
 {
