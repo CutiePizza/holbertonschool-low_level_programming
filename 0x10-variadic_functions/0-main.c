@@ -2,10 +2,11 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code for 0-sum_them_all.c
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     int sum;
