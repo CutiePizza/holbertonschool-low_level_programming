@@ -1,8 +1,9 @@
 #include "holberton.h"
+
 /**
- * string_toupper - check the code for Holberton School students.
- * @ch: character
- * Return: character
+ * string_toupper - hanges all lowercase letters of a string to uppercase.
+ * @ch: String
+ * Return: String
  */
 
 char *string_toupper(char *ch)

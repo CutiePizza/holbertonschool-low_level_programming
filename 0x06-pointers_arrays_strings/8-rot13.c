@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * rot13 - encodes a string with rot13 algorithm.
  * @ch: character
@@ -8,9 +9,9 @@
 char *rot13(char *ch)
 {
 
-int i, j;
-char T[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char I[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
+	char T[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char I[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; ch[i] != '\0'; i++)
 	{
@@ -23,5 +24,5 @@ char I[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 			}
 		}
 	}
-return (ch);
+	return (ch);
 }

@@ -1,6 +1,7 @@
 #include "holberton.h"
+
 /**
- * leet - check the code for Holberton School students.
+ * leet - ncodes a string into 1337.
  * @ch: character
  * Return: Always 0.
  */
@@ -8,9 +9,9 @@
 char *leet(char *ch)
 {
 
-int i, j;
-char T[] = "aAeEoOtTlL";
-char T2[] = "4433007711";
+	int i, j;
+	char T[] = "aAeEoOtTlL";
+	char T2[] = "4433007711";
 
 	for (i = 0; ch[i] != '\0'; i++)
 	{
@@ -21,6 +22,6 @@ char T2[] = "4433007711";
 		}
 
 	}
-return (ch);
+	return (ch);
 
 }

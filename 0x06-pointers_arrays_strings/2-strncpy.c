@@ -1,15 +1,17 @@
 #include "holberton.h"
+
 /**
-* _strncpy - Function copy string
-* @dest: character
-* @src: character
-* @n: integer
-* Return: Always 0.
-*/
+ * _strncpy - copies a string
+ * @dest: character
+ * @src: character
+ * @n: integer
+ * Return: String
+ */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 
-int lenD = 0, lenS = 0, i;
+	int lenD = 0, lenS = 0, i;
 
 	while (dest[lenD] != '\0')
 	{
@@ -27,6 +29,6 @@ int lenD = 0, lenS = 0, i;
 			dest[i] = 0;
 	}
 
-return (dest);
+	return (dest);
 
 }

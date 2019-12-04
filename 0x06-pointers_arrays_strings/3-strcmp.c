@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
- * _strcmp - check the code for Holberton School students.
+ * _strcmp - compares two strings.
  * @s1: char
  * @s2: char
  * Return: an integer
  */
+
 int _strcmp(char *s1, char *s2)
 {
 
@@ -16,9 +18,9 @@ int _strcmp(char *s1, char *s2)
 		l2++;
 
 	if (l1 > l2)
-	sup = l2;
+		sup = l2;
 	else
-	sup = l1;
+		sup = l1;
 
 	while (i < sup && c == 0)
 	{
