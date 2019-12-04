@@ -1,9 +1,11 @@
 #include "holberton.h"
+
 /**
-   * print_last_digit - entry point
-    * @c: number to  check
-     * Return: Always 0 (Success)
-      */
+ * print_last_digit - prints the last digit of a number.
+ * @c: number to  check
+ * Return: Always 0 (Success)
+ */
+
 int print_last_digit(int c)
 {
 	c %= 10;
