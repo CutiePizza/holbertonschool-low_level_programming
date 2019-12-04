@@ -4,10 +4,11 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code for 9-insert_nodeint.c
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     listint_t *head;
