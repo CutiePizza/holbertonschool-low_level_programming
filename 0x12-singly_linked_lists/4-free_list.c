@@ -1,9 +1,10 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
-  * free_list - frees a list
-  * @head: header of the list
-  */
+ * free_list - frees a list
+ * @head: header of the list
+ */
 
 void free_list(list_t *head)
 {

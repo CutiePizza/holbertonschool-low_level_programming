@@ -1,12 +1,13 @@
 #include "lists.h"
 #include <stdio.h>
 #include <string.h>
+
 /**
-  * add_node - Add a node
-  * @head: header of the list
-  * @str: string to add
-  * Return: An unsigned integer
-  */
+ * add_node - Add a node
+ * @head: header of the list
+ * @str: string to add
+ * Return: An unsigned integer
+ */
 
 list_t *add_node(list_t **head, const char *str)
 {

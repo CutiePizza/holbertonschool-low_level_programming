@@ -1,10 +1,11 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
-  * list_len - Return number of elements of a list
-  * @h: header of the list
-  * Return: An unsigned integer
-  */
+ * list_len - Return number of elements of a list
+ * @h: header of the list
+ * Return: An unsigned integer
+ */
 
 size_t list_len(const list_t *h)
 {
@@ -17,5 +18,5 @@ size_t list_len(const list_t *h)
 		i++;
 	}
 
-return (i);
+	return (i);
 }
