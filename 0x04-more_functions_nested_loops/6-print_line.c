@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
-* print_line - print a line.
-* @n: integer
-* Return: Always 0.
-*/
+ * print_line - print a line.
+ * @n: integer
+ * Return: Always 0.
+ */
+
 void print_line(int n)
 {
 	int i;
