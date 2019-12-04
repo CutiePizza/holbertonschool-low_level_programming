@@ -26,6 +26,6 @@ ___
 - **task 101 : write** It's a C program that prints exactly **and that piece of art is useful" - Dora Korpar, 2015-10-19,** followed by a new line, to the standard error.
 ****
 
-#AUTHOR(S)
+# AUTHOR(S)
 ___
 Inès Chokri : [Twitter](https://twitter.com/chokri_ines) - <ines.chokri97@gmail.com> - [Linkedin](https://www.linkedin.com/in/in%C3%A8s-chokri-b247b7175/)
