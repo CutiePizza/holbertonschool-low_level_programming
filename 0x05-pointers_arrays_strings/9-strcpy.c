@@ -1,10 +1,11 @@
 #include "holberton.h"
+
 /**
-* _strcpy - check the code for Holberton School students.
-*@dest: char
-*@src: char
-* Return: Always 0.
-*/
+ * _strcpy - copies src to dest.
+ * @dest: char
+ * @src: char
+ */
+
 char *_strcpy(char *dest, char *src)
 {
 
@@ -22,5 +23,5 @@ char *_strcpy(char *dest, char *src)
 	}
 	dest[j] = '\0';
 
-return (dest);
+	return (dest);
 }

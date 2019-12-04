@@ -1,9 +1,11 @@
 #include "holberton.h"
+
 /**
-   * _strlen - return length of a string.
-    *@s : character
-     * Return: integer
-      */
+ * _strlen - count length of a string.
+ * @s : character
+ * Return: length of the string
+ */
+
 int _strlen(char *s)
 {
 	int i = 0;
@@ -14,5 +16,5 @@ int _strlen(char *s)
 		c++;
 		i++;
 	}
-return (c);
+	return (c);
 }

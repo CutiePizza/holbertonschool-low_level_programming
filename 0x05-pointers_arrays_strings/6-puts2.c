@@ -1,9 +1,10 @@
 #include "holberton.h"
+
 /**
  * puts2 - return odd lines
- *@str: character
- * Return: Always 0.
+ * @str: pointer to character
  */
+
 void puts2(char *str)
 {
 	int len, j;
@@ -18,8 +19,8 @@ void puts2(char *str)
 	{
 		if (j % 2 == 0)
 		{
-		_putchar(str[j]);
+			_putchar(str[j]);
 		}
 	}
-_putchar('\n');
+	_putchar('\n');
 }
