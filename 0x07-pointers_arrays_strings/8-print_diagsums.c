@@ -1,11 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
+
 /**
-  * print_diagsums - print sum of diagonals of an array of array
-  * @a: array of int
-  * @size: size of array
-  * Return: void
-  */
+ * print_diagsums - print sum of diagonals of an array of array
+ * @a: array of int
+ * @size: size of array
+ */
 
 void print_diagsums(int *a, int size)
 {

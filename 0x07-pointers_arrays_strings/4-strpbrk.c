@@ -1,15 +1,16 @@
 #include "holberton.h"
+
 /**
-  * _strpbrk - Function
-  * @s: String
-  * @accept: String
-  * Return: an integer
-  */
+ * _strpbrk - Function
+ * @s: String
+ * @accept: String
+ * Return: an integer
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
 
-int i = 0, j;
+	int i = 0, j;
 
 	while (s[i])
 	{
@@ -23,9 +24,4 @@ int i = 0, j;
 		i++;
 	}
 	return (0);
-
-
-
-
-
 }

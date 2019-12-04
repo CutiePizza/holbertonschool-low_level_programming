@@ -1,15 +1,16 @@
 #include "holberton.h"
+
 /**
-  * _strspn - Function
-  * @s: String
-  * @accept: String
-  * Return: an integer
-  */
+ * _strspn - Function
+ * @s: String
+ * @accept: String
+ * Return: an integer
+ */
 
 unsigned int _strspn(char *s, char *accept)
 {
 
-int i, j;
+	int i, j;
 
 	for (i = 0; s[i]; i++)
 	{
