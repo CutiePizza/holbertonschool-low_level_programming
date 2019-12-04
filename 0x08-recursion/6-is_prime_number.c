@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
-  * is_prime_number - call a fucntion that tells if a number is primary
-  * @n: Integer
-  * Return: Integer
-  */
+ * is_prime_number - call a fucntion that tells if a number is primary
+ * @n: Integer
+ * Return: Integer
+ */
+
 int is_prime_number(int n)
 {
 	return (prime(2, n));
 }
 
 /**
-  * prime - Return if a number is primary or not
-  * @i: integer to increment
-  * @n: Number to test
-  * Return: 0 or 1
-  */
+ * prime - Return if a number is primary or not
+ * @i: integer to increment
+ * @n: Number to test
+ * Return: 0 or 1
+ */
 
 int prime(int i, int n)
 {
