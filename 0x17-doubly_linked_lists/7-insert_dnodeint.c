@@ -1,5 +1,31 @@
 #include "lists.h"
 
+
+
+/**
+ * test - test node NULL
+ * @node: node
+ */
+
+void test(dlistint_t *node)
+{
+	if (node == NULL)
+		return (NULL);
+}
+
+/**
+ * func - assign
+ * @new: node
+ * @p: node
+ */
+
+void func(dlistint_t *new, dlistint_t *p)
+{
+	new->next = NULL;
+	new->prev = p;
+	p->next = new;
+}
+
 /**
  * insert_dnodeint_at_index - insert node at a given position
  * @h: head of list
@@ -15,10 +41,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 	unsigned int i = 0;
 
-	if (h == NULL)
-		return (NULL);
-	if (new == NULL)
-		return (NULL);
+	test(h);
+	test(h);
 	new->n = n;
 	if (idx == 0)
 	{
@@ -29,8 +53,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	if (p == NULL)
-		return (NULL);
+	test(h);
 	while (p->next != NULL)
 	{
 		if (i == idx)
@@ -48,9 +71,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else if (p->next == NULL && i + 1 == idx)
 	{
-		new->next = NULL;
-		new->prev = p;
-		p->next = new;
+		func(new, p);
 		return (new);
 	}
 	free(new);
