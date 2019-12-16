@@ -1,17 +1,15 @@
 #include "holberton.h"
 
 /**
- * _isdigit - return 1 if digit
- * @c: integer
- * Return: 0 or 1
+ * _abs - return abs of n
+ * @n: integer
+ * Return: Always n.
  */
 
-int _isdigit(int c)
+int _abs(int n)
 {
-	int n = 0;
-
-	if (c >= '0' && c <= '9')
-		n = 1;
-
-	return (n);
+	if (n > 0)
+		return (n);
+	else
+		return (-n);
 }

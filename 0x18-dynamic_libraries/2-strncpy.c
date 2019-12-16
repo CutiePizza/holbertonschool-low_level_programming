@@ -1,22 +1,34 @@
 #include "holberton.h"
 
 /**
- * _memcpy - copies n bytes from src to dest
+ * _strncpy - copies a string
  * @dest: character
  * @src: character
- * @n: int
- * Return: pointer to dest
+ * @n: integer
+ * Return: String
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 
-	unsigned int i;
+	int lenD = 0, lenS = 0, i;
+
+	while (dest[lenD] != '\0')
+	{
+		lenD++;
+	}
+	while (src[lenS] != '\0')
+	{
+		lenS++;
+	}
 
 	for (i = 0; i < n; i++)
 	{
-		*(dest + i) = *(src + i);
+		dest[i] = src[i];
+		if (i > lenS)
+			dest[i] = 0;
 	}
+
 	return (dest);
 
 }
