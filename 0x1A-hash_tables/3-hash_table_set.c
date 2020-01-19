@@ -33,7 +33,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new->key = strdup(key);
 	new->value = strdup(value);
-	new->next = ht->array[index];
+	if (ht->array[index] != NULL)
+		new->next = ht->array[index];
+	else
+		new->next = NULL;
 	ht->array[index] = new;
 	return (1);
 }
