@@ -8,6 +8,7 @@ all: $(OBJ)
 clean:
 	$(RM) *~ $(NAME)
 oclean:
-	$(RM) *$(OBJ)
+	$(RM) $(OBJ)
 fclean:
-	$(RM) *~ $(NAME) *$(OBJ)
+	$(RM) *~ $(NAME) $(OBJ)
+re: fclean all
