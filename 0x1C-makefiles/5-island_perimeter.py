@@ -18,7 +18,7 @@ def island_perimeter(grid):
         sums += 1
     if (len(my_list) == 1):
             sums += 4
-    else:
+    elif len(my_list) != 0:
         sums *= 2
         sums += 6
     return (sums)
