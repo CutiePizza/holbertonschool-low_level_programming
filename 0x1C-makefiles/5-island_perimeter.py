@@ -8,6 +8,8 @@ def island_perimeter(grid):
     """
     returns the island perimeter described in grid
     """
+    if !grid or len(grid) == 0:
+        return None
     sums = 0
     my_list = []
     for i in range(len(grid)):
