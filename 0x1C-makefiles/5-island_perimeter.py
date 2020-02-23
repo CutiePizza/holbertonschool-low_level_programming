@@ -9,16 +9,12 @@ def island_perimeter(grid):
     returns the island perimeter described in grid
     """
     sums = 0
-    my_list = []
     for i in range(len(grid)):
-        for j in grid[i]:
-            if j == 1:
-                my_list.append(j)
-    for i in range(1, len(my_list) - 1):
-        sums += 1
-    if (len(my_list) == 1):
-            sums += 4
-    elif len(my_list) != 0:
-        sums *= 2
-        sums += 6
+        for j in range(len(grid[i])):
+            if grid[i][j]:
+                sums += 4
+                if j > 0 and grid[i][j - 1]:
+                    sums -= 2
+                if i > 0 and grid[i - 1][j]:
+                    sums -= 2
     return (sums)
